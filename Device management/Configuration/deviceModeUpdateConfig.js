@@ -1,7 +1,7 @@
 //
 // Device mode : update config of device from LO
 //
-var mqtt =require('/opt/nodejs/lib/node_modules/mqtt/mqtt.js');
+var mqtt =require('mqtt.js');
 const url = "mqtt://liveobjects.orange-business.com:1883";
 const apiKey = "enter your api key here";                // ENTER API KEY HERE
 const mqttTopic = "dev/cfg/upd";
