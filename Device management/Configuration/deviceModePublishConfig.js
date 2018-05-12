@@ -2,7 +2,7 @@
 // Device mode : publish config from device to LO
 // Just enter ypur API KEY where noticed
 //
-var mqtt =require('/opt/nodejs/lib/node_modules/mqtt/mqtt.js');
+var mqtt =require('mqtt.js');
 const url = "mqtt://liveobjects.orange-business.com:1883";
 const apiKey = "enter your api key here";               // ENTER API KEY HERE
 const mqttTopic = "dev/cfg";
