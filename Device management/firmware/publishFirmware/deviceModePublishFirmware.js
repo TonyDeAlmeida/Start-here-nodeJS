@@ -2,6 +2,7 @@
 // Device mode : publish firmware from device to LO
 // Just enter ypur API KEY where noticed
 //
+var mqtt =require('mqtt.js');
 const url = "mqtt://liveobjects.orange-business.com:1883";
 const apiKey = "enter your key here";     // ENTER API KEY HERE
 const mqttTopic = "dev/rsc";
