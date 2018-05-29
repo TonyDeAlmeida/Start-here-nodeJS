@@ -4,6 +4,7 @@
 // at the end : you should find a new file : downloadedFirmware.bin with the content
 // you uploaded in Live Objects as the new firmware version
 //
+var mqtt =require('mqtt.js');
 const url = "mqtt://liveobjects.orange-business.com:1883";
 const apiKey = "enter your key here";                // ENTER API KEY HERE
 const mqttTopic = "dev/rsc/upd";
