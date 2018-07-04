@@ -5,7 +5,7 @@
  * if you launch the consumer after messages been published, these old messages will be delivered in the right order
  */
 
-var mqtt =require('/opt/nodejs/lib/node_modules/mqtt/mqtt.js');
+var mqtt =require('mqtt.js');
 const url = "mqtt://liveobjects.orange-business.com:1883";
 const APIKEY = "enter your api key here";     // ENTER API KEY HERE
 const MQTT_TOPIC = "fifo/sampleFifo";
@@ -14,7 +14,7 @@ const CLIENT_ID = "myFifoClientId";
 
 /** connect **/
 console.log("MQTT::Connecting to ");
-var client  = mqtt.connect(url, {username:USERNAME, password:APIKEY, keepAlive:30})
+var client  = mqtt.connect(url, {username:USERNAME,,clientId:CLIENT_ID, password:APIKEY, keepAlive:30})
 
 
 client.on("connect", function() {
