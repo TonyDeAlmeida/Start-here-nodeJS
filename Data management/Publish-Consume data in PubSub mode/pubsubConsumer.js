@@ -5,13 +5,13 @@
 // You MUST first start this consumer before publishing, else data will be lost !
 //
 
-var mqtt =require('/opt/nodejs/lib/node_modules/mqtt/mqtt.js');
+var mqtt =require('mqtt.js');
 const url = "mqtt://liveobjects.orange-business.com:1883";
 const apiKey = "enter your api key here";     // ENTER API KEY HERE
 const USERNAME  = "payload+bridge";
 const mqttTopic = "pubsub/pubSubSampleTopic";
 
-var client  = mqtt.connect(url, {username:USERNAME, password:apiKey, keepAlive:30})
+var client  = mqtt.connect(url, {username:USERNAME,clientId:CLIENT_ID, password:apiKey, keepAlive:30})
 
 client.on("connect", function() {
   console.log("MQTT::Connected");
