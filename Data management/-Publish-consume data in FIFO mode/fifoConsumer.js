@@ -14,7 +14,7 @@ const CLIENT_ID = "myFifoClientId";
 
 /** connect **/
 console.log("MQTT::Connecting to ");
-var client  = mqtt.connect(url, {username:USERNAME,,clientId:CLIENT_ID, password:APIKEY, keepAlive:30})
+var client  = mqtt.connect(url, {username:USERNAME,clientId:CLIENT_ID, password:APIKEY, keepAlive:30})
 
 
 client.on("connect", function() {
