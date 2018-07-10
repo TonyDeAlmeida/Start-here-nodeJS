@@ -12,7 +12,7 @@ const url = "mqtt://liveobjects.orange-business.com:1883";
 const APIKEY = "enter your api key here";     // ENTER API KEY HERE
 const MQTT_TOPIC = "router/~event/v1/data/#";
 const USERNAME  = "payload+bridge";
-const CLIENT_ID = "myFifoClientId";
+const CLIENT_ID = "myRouterConsumerClientId";
 
 /** connect **/
 console.log("MQTT::Connecting to ");
