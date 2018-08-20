@@ -132,10 +132,7 @@ Best way to take benefit of the Fifo mode : create fifos in Live Objects UI, wi
 All samples are independent project that you run according your needs.
 
 
-## 4.1 JAVA SAMPLES (PUBLISHING AND CONSUMING) ## 
-
-All projects are maven projects, allowing you to use them directly in your preferred IDE.
-They are all based on the same structure, and use the paho-mqtt java library.
+## 4.1 SAMPLES (PUBLISHING AND CONSUMING) ## 
 
 
 ### 4.1.1 LIVE OBJECTS PARAMETERS ###
@@ -145,17 +142,17 @@ A first group of parameters defines the connection to Live Objets
 
 ```ruby
 // Connection parameters
-public static String SERVER = "tcp://liveobjects.orange-business.com:1883"; // declare Live Objects end point
-public static String API_KEY = "<<YOUR API KEY>>";                             // <-- REPLACE by YOUR API_KEY! 
-public static String USERNAME="json+device";                                // The option to publish in device mode
-public static String CLIENT_ID="urn:lo:nsid:samples:device1";               // in device mode : urn:lo:nsid:{namespace}:{id}
+SERVER = "tcp://liveobjects.orange-business.com:1883"; // declare Live Objects end point
+API_KEY = "<<YOUR API KEY>>";                             // <-- REPLACE by YOUR API_KEY! 
+USERNAME="json+device";                                // The option to publish in device mode
+CLIENT_ID="urn:lo:nsid:samples:device1";               // in device mode : urn:lo:nsid:{namespace}:{id}
 ```
 
 Notice that you have to define the connection mode (device mode or bridged mode) when connecting  
 Connecting using SSL : you only have to change the SERVER end point to:
 
 ```ruby
-public static String SERVER mqtts://liveobjects.orange-business.comm:8883
+SERVER mqtts://liveobjects.orange-business.comm:8883
 ```
 
 The second group of parameters defines the way your message will be published to Live Objects:
@@ -163,8 +160,8 @@ The second group of parameters defines the way your message will be published to
 
 ```ruby
 //Publication parameters
-public static String TOPIC="dev/data";  // topic to publish to
-public static int qos = 1;              // set the qos
+TOPIC="dev/data";  // topic to publish to
+int qos = 1;              // set the qos
 ```
 
 ### 4.1.2 JSON STRUCTURE ###
